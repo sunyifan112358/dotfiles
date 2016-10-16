@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/yifan/Documents/Asaka-Client/container/dev/server'
+let g:netrw_dirhist_2='/home/yifan/Documents/Asaka-Client/container/cuda7.5/client'
+let g:netrw_dirhist_3='/home/yifan/Documents/Asaka-Client/cmake'
