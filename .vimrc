@@ -4,8 +4,6 @@ filetype indent plugin on
 
 syntax on
 set background=dark
-colorscheme solarized
-
 set hidden
 
 set wildmenu
@@ -44,9 +42,18 @@ set tabstop=2
 set expandtab
 
 set colorcolumn=80
+set encoding=utf-8
 
 execute pathogen#infect()
 let g:neocomplete#enable_at_startup = 1
 nmap <F8> :TagbarToggle<CR>
 
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline_theme = 'molokai'
 
+colorscheme molokai
