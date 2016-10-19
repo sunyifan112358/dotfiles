@@ -44,7 +44,13 @@ set expandtab
 set colorcolumn=80
 set encoding=utf-8
 
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <C-u> <C-w>w
+
 execute pathogen#infect()
+execute pathogen#helptags()
+
 let g:neocomplete#enable_at_startup = 1
 nmap <F8> :TagbarToggle<CR>
 
@@ -63,6 +69,10 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
-
+" VIM clang-format
+let g:clang_format#code_style = "google"
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c ClangFormatAutoEnable
 
 colorscheme molokai
