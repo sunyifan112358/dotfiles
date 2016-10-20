@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git submodule init
+git submodule update
+
 backup_folder_name=$HOME/old_dotfiles/$(date +%s)_old_dotfiles
 mkdir -p $backup_folder_name
 
