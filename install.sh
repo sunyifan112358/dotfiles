@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get install git zsh
 
 oh-my-zsh/tools/install.sh
-chsh -s `which zsh`
+chsh $USER -s `which zsh`
 
 git submodule init
 git submodule update
