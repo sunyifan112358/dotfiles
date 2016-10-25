@@ -4,9 +4,6 @@
 [submodule "vim/bundle/molokai"]
 	path = vim/bundle/molokai
 	url = https://github.com/tomasr/molokai.git
-[submodule "vim/bundle/neocomplete.vim"]
-	path = vim/bundle/neocomplete.vim
-	url = https://github.com/shougo/neocomplete.vim
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -28,3 +25,12 @@
 [submodule "vim/bundle/vim-markdown"]
 	path = vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/youcompleteme"]
+	path = vim/bundle/youcompleteme
+	url = https://github.com/valloric/youcompleteme
+[submodule "vim/bundle/DoxygenToolkit.vim"]
+	path = vim/bundle/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+[submodule "vim/bundle/syntaxm4.vim"]
+	path = vim/bundle/syntaxm4.vim
+	url = https://github.com/vim-scripts/syntaxm4.vim.git
