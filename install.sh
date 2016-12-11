@@ -9,7 +9,7 @@ mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
 mv $HOME/.zshrc $backup_folder_name 2> /dev/null
 
 sudo apt-get update
-sudo apt-get install git zsh vim 
+sudo apt-get install git zsh vim tmux
 
 oh-my-zsh/tools/install.sh
 
