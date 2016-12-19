@@ -9,7 +9,7 @@ mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
 mv $HOME/.zshrc $backup_folder_name 2> /dev/null
 
 sudo apt-get update
-sudo apt-get install git zsh vim tmux build-essential python-dev
+sudo apt-get install git zsh vim cmake tmux build-essential python-dev
 
 oh-my-zsh/tools/install.sh
 
