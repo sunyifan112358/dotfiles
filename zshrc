@@ -88,3 +88,5 @@ source $ZSH/oh-my-zsh.sh
 export TERM="xterm-256color"
 export CUDA_HOME="/usr/local/cuda"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-367
+
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle

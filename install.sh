@@ -8,8 +8,10 @@ mv $HOME/.vim $backup_folder_name 2> /dev/null
 mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
 mv $HOME/.zshrc $backup_folder_name 2> /dev/null
 
+sudo add-apt-repository ppa:webupd8team/java 
 sudo apt-get update
-sudo apt-get install git zsh vim cmake tmux build-essential python-dev
+sudo apt-get install git zsh vim cmake tmux build-essential python-dev \
+  oracle-java8-installer oracle-java8-set-default
 
 oh-my-zsh/tools/install.sh
 
