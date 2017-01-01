@@ -90,3 +90,4 @@ export CUDA_HOME="/usr/local/cuda"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia-367
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export GRADLE_HOME=$HOME/library/gradle-3.2.1
