@@ -1,5 +1,7 @@
 #/bin/bash
 
+git submodule update --init --recursive
+
 backup_folder_name=$HOME/old_dotfiles/$(date +%s)_old_dotfiles
 mkdir -p $backup_folder_name
 
@@ -14,8 +16,6 @@ sudo apt-get install git zsh vim cmake tmux build-essential python-dev \
   oracle-java8-installer oracle-java8-set-default
 
 oh-my-zsh/tools/install.sh
-
-git submodule update --init --recursive
 
 # Install YouCompleteMe with clang
 cd vim/bundle/youcompleteme/ && ./install.py --clang-completer && cd ../../..
