@@ -28,7 +28,7 @@ set t_vb=
 
 set t_Co=256
 
-set mouse=a
+" set mouse=a
 
 set cmdheight=2
 
