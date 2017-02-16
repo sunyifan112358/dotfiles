@@ -1,8 +1,0 @@
-// Place your settings in this file to overwrite the default settings
-{
-    "editor.fontFamily": "'Dejavu Sans Mono for PowerLine'",
-    "editor.fontSize": 16,
-    "editor.rulers": [
-        80
-    ],
-}
