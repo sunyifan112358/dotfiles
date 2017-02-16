@@ -85,6 +85,28 @@ autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " JS
 let g:javascript_plugin_jsdoc = 1
+let jshint2_read = 1
+let jshint2_save = 1
+let jshint2_close = 0
+let jshint2_confirm = 0
+let jshint2_color = 1
+let jshint2_error = 1
+let jshint_min_height = 3
+let jshint_max_height = 12
+nnoremap <silent><F1> :JSHint<CR>
+inoremap <silent><F1> <C-O>:JSHint<CR>
+vnoremap <silent><F1> :JSHint<CR>
+
+" show next jshint error
+nnoremap <silent><F2> :lnext<CR>
+inoremap <silent><F2> <C-O>:lnext<CR>
+vnoremap <silent><F2> :lnext<CR>
+
+" show previous jshint error
+nnoremap <silent><F3> :lprevious<CR>
+inoremap <silent><F3> <C-O>:lprevious<CR>
+vnoremap <silent><F3> :lprevious<CR>
+
 
 " Comment
 " Add spaces after comment delimiters by default
@@ -101,3 +123,4 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
