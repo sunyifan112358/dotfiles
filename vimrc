@@ -66,10 +66,10 @@ let g:airline#extensions#tabline#show_buffers = 1
 let g:airline_theme = 'molokai'
 
 " NERDTree Setup
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"map <C-n> :NERDTreeToggle<CR>
 
 " VIM clang-format
 let g:clang_format#code_style = "google"
@@ -101,7 +101,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
 " JS
