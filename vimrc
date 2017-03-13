@@ -83,6 +83,7 @@ colorscheme molokai
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>a <Plug>(go-alternate)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>v <Plug>(go-coverage-clear)
 au FileType go nmap <leader>ds <Plug>(go-def-split)
