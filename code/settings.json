@@ -2,7 +2,18 @@
 {
     "editor.fontFamily": "'Dejavu Sans Mono for PowerLine'",
     "editor.fontSize": 14,
+    "editor.autoClosingBrackets": false,
     "editor.rulers": [
         80
     ],
+    "sync.gist": "9e5c7e17e8eff907cb8ad41845db876b",
+    "sync.lastUpload": "1970-01-01T00:00:00.000Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "1970-01-01T00:00:00.000Z",
+    "sync.version": 242,
+    "sync.showSummary": true,
+    "sync.forceDownload": false,
+    "sync.workspaceSync": false,
+    "sync.anonymousGist": false
 }
