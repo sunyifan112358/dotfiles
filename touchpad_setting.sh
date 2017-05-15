@@ -5,8 +5,8 @@ synclient PalmMinWidth=1
 synclient PalmMinZ=1
 synclient TapAndDragGesture=0
 synclient MaxTapMove=1
-synclient MaxTapTime=80
+synclient MaxTapTime=180
 
-syndaemon -i 0.8 -t -K -R
+syndaemon -i 0.8 -t -K -R -d
 
 
