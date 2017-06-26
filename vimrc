@@ -53,8 +53,8 @@ nnoremap <C-u> <C-w>w
 execute pathogen#infect()
 execute pathogen#helptags()
 
-let g:neocomplete#enable_at_startup = 1
-nmap <F8> :TagbarToggle<CR>
+" let g:neocomplete#enable_at_startup = 1
+" nmap <F8> :TagbarToggle<CR>
 
 " Airline setup
 let g:airline_powerline_fonts = 1
@@ -84,8 +84,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>a <Plug>(go-alternate)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <leader>v <Plug>(go-coverage-clear)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 au FileType go nmap <leader>ds <Plug>(go-def-split)
 au FileType go nmap <leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <leader>dt <Plug>(go-def-tab)
@@ -100,10 +99,14 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:go_fmt_command = "gofmt"
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 "let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
+let g:go_info_mode = 'gocode'
+let g:go_updatetime = 200
 
 " JS
 let g:javascript_plugin_jsdoc = 1
