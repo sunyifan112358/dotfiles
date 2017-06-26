@@ -46,3 +46,6 @@
 [submodule "vim/bundle/AnsiEsc.vim"]
 	path = vim/bundle/AnsiEsc.vim
 	url = https://github.com/vim-scripts/AnsiEsc.vim.git
+[submodule "bash-it"]
+	path = bash-it
+	url = https://github.com/Bash-it/bash-it.git

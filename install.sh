@@ -12,6 +12,8 @@ mv $HOME/.profile $backup_folder_name 2> /dev/null
 
 sudo apt-get -y install git vim cmake tmux build-essential python-dev
 
+cd bash-it && ./install.sh --silent && cd ..
+
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/vim $HOME/.vim
 ln -s $PWD/tmux.conf $HOME/.tmux.conf 
