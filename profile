@@ -21,6 +21,8 @@ PATH=$PATH:$HOME/bin:$HOME/.local/bin:$PATH
 
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$PATH:/opt/rocm/bin/
+export PATH=$PATH:/home/yifan/anaconda2/bin
 
 export PYTHONPATH=$PYTHONPATH:~/Documents/crisp
 
