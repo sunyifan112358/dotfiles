@@ -103,8 +103,8 @@ let g:go_fmt_command = "gofmt"
 " let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 "let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
-let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
+let g:go_auto_type_info = 0
+let g:go_auto_sameids = 0
 let g:go_info_mode = 'gocode'
 let g:go_updatetime = 200
 
