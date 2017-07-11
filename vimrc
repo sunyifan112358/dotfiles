@@ -77,7 +77,7 @@ autocmd FileType h,c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType h,c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 autocmd FileType h,c ClangFormatAutoEnable
 
-colorscheme molokai
+" colorscheme molokai
 
 " Golang
 au FileType go nmap <leader>r <Plug>(go-run)
