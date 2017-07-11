@@ -72,11 +72,11 @@ let g:airline_theme = 'molokai'
 "map <C-n> :NERDTreeToggle<CR>
 
 " VIM clang-format
-let g:clang_format#code_style = "google"
-autocmd FileType h,c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType h,c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-autocmd FileType h,c ClangFormatAutoEnable
-
+" let g:clang_format#code_style = "google"
+" autocmd FileType h,c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+" autocmd FileType h,c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" autocmd FileType h,c ClangFormatAutoEnable
+"
 colorscheme molokai
 
 " Golang
