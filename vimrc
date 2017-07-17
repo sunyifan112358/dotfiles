@@ -71,11 +71,11 @@ let g:airline_theme = 'molokai'
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "map <C-n> :NERDTreeToggle<CR>
 
-" VIM clang-format
-let g:clang_format#code_style = "google"
-autocmd FileType h,c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType h,c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-autocmd FileType h,c ClangFormatAutoEnable
+" VIM clang-format 
+let g:clang_format#code_style = "Google"
+autocmd FileType h,c,cpp,cc,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType h,c,cpp,cc,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType h,c,cc ClangFormatAutoEnable
 
 " colorscheme molokai
 

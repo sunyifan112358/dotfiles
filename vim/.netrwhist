@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/yifan/Documents/Asaka-Client/container/dev/server'
 let g:netrw_dirhist_2='/home/yifan/Documents/Asaka-Client/container/cuda7.5/client'
 let g:netrw_dirhist_3='/home/yifan/Documents/Asaka-Client/cmake'
 let g:netrw_dirhist_4='/home/yifan/dotfiles/vim'
+let g:netrw_dirhist_5='/home/yifan/dev/src/github.com/NUCAR-DEV/Hetero-Mark/cmake'
+let g:netrw_dirhist_6='/home/yifan/dev/src/github.com/NUCAR-DEV/Hetero-Mark/build/src/aes/cl20/CMakeFiles'
+let g:netrw_dirhist_7='/home/yifan/dev/src/github.com/NUCAR-DEV/Hetero-Mark/src/kmeans/cl12'
+let g:netrw_dirhist_8='/home/yifan/dev/src/github.com/doody1986/DNNMark/core/include'
+let g:netrw_dirhist_9='/home/yifan/dev/src/github.com/doody1986/DNNMark/core/src'
