@@ -38,10 +38,10 @@ set notimeout ttimeout ttimeoutlen=200
 
 set pastetoggle=<F11>
 
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-" set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
 
 set colorcolumn=80
 set encoding=utf-8
@@ -126,3 +126,7 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" Python
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+let g:autopep8_disable_show_diff=1
