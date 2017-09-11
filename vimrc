@@ -129,3 +129,7 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+" Python
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
+let g:autopep8_disable_show_diff=1
