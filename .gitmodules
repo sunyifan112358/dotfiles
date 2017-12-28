@@ -40,3 +40,12 @@
 [submodule "vim/bundle/vim-autopep8"]
 	path = vim/bundle/vim-autopep8
 	url = https://github.com/tell-k/vim-autopep8
+[submodule "vim/bundle/vim-opencl"]
+	path = vim/bundle/vim-opencl
+	url = https://github.com/petRUShka/vim-opencl.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/nerdtree-git-plugin"]
+	path = vim/bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
