@@ -53,83 +53,38 @@ nnoremap <C-u> <C-w>w
 " Rewrapping
 map <F8> gq}
 
-execute pathogen#infect()
-execute pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'fatih/vim-go'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+call plug#end()
 
 " let g:neocomplete#enable_at_startup = 1
 " nmap <F8> :TagbarToggle<CR>
 
 " Airline setup
-let g:airline_powerline_fonts = 0
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
+" let g:airline_powerline_fonts = 0
+" if !exists('g:airline_symbols')
+"   let g:airline_symbols = {}
+" endif
+" let g:airline_symbols.space = "\ua0"
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline_theme = 'molokai'
 
-" NERDTree Setup
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>
+" Molokai
+colorscheme molokai
 
-" VIM clang-format 
-let g:clang_format#code_style = "Google"
-autocmd FileType h,c,cpp,cc,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType h,c,cpp,cc,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-autocmd FileType h,c,cc ClangFormatAutoEnable
-
-" colorscheme molokai
-
-" Golang
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>a <Plug>(go-alternate)
-au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>ds <Plug>(go-def-split)
-au FileType go nmap <leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <leader>dt <Plug>(go-def-tab)
-au FileType go nmap <leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <leader>s <Plug>(go-implements)
-au FileType go nmap <leader>i <Plug>(go-info)
-au FileType go nmap <leader>e <Plug>(go-rename)
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "gofmt"
-" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:go_list_type = "quickfix"
-let g:go_auto_type_info = 0
-let g:go_auto_sameids = 0
-let g:go_info_mode = 'gocode'
-let g:go_updatetime = 200
-
-" JS
-let g:javascript_plugin_jsdoc = 1
-
-" Comment
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
-" Python
-autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
-let g:autopep8_disable_show_diff=1
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
