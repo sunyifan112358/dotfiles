@@ -64,6 +64,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
+Plug 'klen/python-mode'
 call plug#end()
 
 " let g:neocomplete#enable_at_startup = 1
@@ -94,3 +95,6 @@ let g:vim_markdown_folding_disabled = 1
 " Time
 :nmap <F5> i<C-R>=strftime('%T')<CR><ESC>
 :imap <F5> <C-R>=strftime('%T')<CR>
+
+" Python
+let g:pymode_folding = 0
