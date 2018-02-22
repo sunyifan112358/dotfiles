@@ -10,7 +10,9 @@ mv $HOME/.vim $backup_folder_name 2> /dev/null
 mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
 mv $HOME/.profile $backup_folder_name 2> /dev/null
 
-sudo apt-get -y install git vim cmake tmux mosh build-essential
+sudo apt-get -y install \
+  git vim cmake tmux mosh build-essential \
+  nodejs nodejs-legacy npm
 
 cd bash-it && ./install.sh --silent && cd ..
 

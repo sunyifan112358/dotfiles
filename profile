@@ -26,3 +26,5 @@ export PATH=/home/yifan/anaconda2/bin:$PATH
 
 export PYTHONPATH=$PYTHONPATH:~/Documents/crisp
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

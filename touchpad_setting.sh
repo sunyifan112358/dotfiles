@@ -10,6 +10,7 @@ synclient AreaTopEdge=50
 synclient AreaLeftEdge=50
 synclient AreaRightEdge=950
 synclient HorizTwoFingerScroll=0
+synclient VertTwoFingerScroll=1
 synclient VertScrollDelta=-27
 
 syndaemon -i 0.8 -t -K -R -d

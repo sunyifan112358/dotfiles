@@ -52,22 +52,18 @@ nnoremap <C-u> <C-w>w
 
 " Rewrapping
 map <F8> gq}
+map <F9> vipJ
 
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
+Plug 'scrooloose/nerdtree'
+Plug 'https://github.com/skielbasa/vim-material-monokai'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'fatih/vim-go'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " let g:neocomplete#enable_at_startup = 1
@@ -83,8 +79,18 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline_theme = 'molokai'
 
-" Molokai
-colorscheme molokai
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+" Molokai
+"colorscheme molokai
+set background=dark
+"set termguicolors
+colorscheme material-monokai
+
+" Markdown
+let g:vim_markdown_folding_disabled = 1
+
+" Time
+:nmap <F5> i<C-R>=strftime('%T')<CR><ESC>
+:imap <F5> <C-R>=strftime('%T')<CR>
