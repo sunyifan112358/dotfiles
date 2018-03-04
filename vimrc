@@ -64,6 +64,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
+Plug 'rhysd/vim-clang-format'
 Plug 'klen/python-mode'
 call plug#end()
 
