@@ -98,3 +98,8 @@ let g:vim_markdown_folding_disabled = 1
 
 " Python
 let g:pymode_folding = 0
+
+" Go
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+let g:go_fmt_command = "goimports"
