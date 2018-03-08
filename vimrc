@@ -66,6 +66,7 @@ Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format'
 Plug 'klen/python-mode'
+Plug 'petrushka/vim-opencl'
 call plug#end()
 
 " let g:neocomplete#enable_at_startup = 1
