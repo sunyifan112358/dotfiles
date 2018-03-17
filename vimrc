@@ -57,9 +57,8 @@ map <F9> vipJ
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
-Plug 'https://github.com/skielbasa/vim-material-monokai'
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'fatih/vim-go'
@@ -85,11 +84,10 @@ let g:airline_theme = 'molokai'
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Molokai
+" Solarized
 "colorscheme molokai
-set background=dark
-"set termguicolors
-colorscheme material-monokai
+set background=light
+colorscheme solarized
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
