@@ -88,6 +88,7 @@ map <C-n> :NERDTreeToggle<CR>
 "colorscheme molokai
 set background=light
 colorscheme solarized
+let g:solarized_termcolors=256
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
