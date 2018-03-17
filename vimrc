@@ -79,7 +79,7 @@ call plug#end()
 " let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline_theme = 'molokai'
+let g:airline_theme = 'solarized'
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
