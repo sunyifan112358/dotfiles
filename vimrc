@@ -66,6 +66,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format'
 Plug 'klen/python-mode'
 Plug 'petrushka/vim-opencl'
+Plug 'reedes/vim-pencil'
 call plug#end()
 
 " let g:neocomplete#enable_at_startup = 1
@@ -89,6 +90,7 @@ map <C-n> :NERDTreeToggle<CR>
 set background=light
 colorscheme solarized
 let g:solarized_termcolors=256
+highlight ColorColumn ctermbg=160 guibg=#D80000
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
@@ -104,3 +106,10 @@ let g:pymode_folding = 0
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports"
+
+" Vim Pencil
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
