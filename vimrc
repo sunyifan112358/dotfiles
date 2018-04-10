@@ -61,6 +61,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format'
@@ -92,6 +93,19 @@ colorscheme solarized
 let g:solarized_termcolors=256
 highlight ColorColumn ctermbg=160 guibg=#D80000
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Syntastic - javascript
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
 " Markdown
 let g:vim_markdown_folding_disabled = 1
 
@@ -108,8 +122,8 @@ au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports"
 
 " Vim Pencil
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
+"augroup pencil
+  "autocmd!
+  "autocmd FileType markdown,mkd call pencil#init()
+  "autocmd FileType text         call pencil#init()
+"augroup END
