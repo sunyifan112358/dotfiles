@@ -70,9 +70,6 @@ Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
 call plug#end()
 
-" let g:neocomplete#enable_at_startup = 1
-" nmap <F8> :TagbarToggle<CR>
-
 " Airline setup
 " let g:airline_powerline_fonts = 0
 " if !exists('g:airline_symbols')
@@ -105,6 +102,9 @@ let g:syntastic_check_on_wq = 0
 " Syntastic - javascript
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+
+" Syntastic - cuda
+let g:syntastic_cuda_checkers = []
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
