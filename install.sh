@@ -12,7 +12,7 @@ mv $HOME/.profile $backup_folder_name 2> /dev/null
 
 sudo apt-get -y install \
   git vim cmake tmux mosh build-essential \
-  nodejs nodejs-legacy npm
+  nodejs npm
 
 cd bash-it && ./install.sh --silent && cd ..
 
@@ -22,3 +22,5 @@ ln -s $PWD/tmux.conf $HOME/.tmux.conf
 ln -s $PWD/profile $HOME/.profile
 
 git config --global core.editor "vim"
+
+vim +PlugInstall +qall
