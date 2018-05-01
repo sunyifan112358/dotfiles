@@ -68,6 +68,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'klen/python-mode'
 Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
+Plug 'valloric/youcompleteme'
 call plug#end()
 
 " Airline setup

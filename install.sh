@@ -24,3 +24,8 @@ ln -s $PWD/profile $HOME/.profile
 git config --global core.editor "vim"
 
 vim +PlugInstall +qall
+
+# Install YouCompleteMe
+cd vim/plugged/youcompleteme
+./install.py --clang-completer --go-complete
+cd ../../..
