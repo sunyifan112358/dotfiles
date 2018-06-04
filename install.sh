@@ -12,7 +12,7 @@ mv $HOME/.profile $backup_folder_name 2> /dev/null
 
 sudo apt-get -y install \
   git vim cmake tmux mosh build-essential \
-  nodejs npm
+  nodejs npm python-dev
 
 cd bash-it && ./install.sh --silent && cd ..
 
