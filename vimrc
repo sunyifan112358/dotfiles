@@ -23,8 +23,13 @@ set laststatus=2
 
 set confirm
 
-set visualbell
+"set visualbell
 set t_vb=
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set guifont=Roboto\ Mono\ Light\ for\ Powerline\ 12
 
 set t_Co=256
 
