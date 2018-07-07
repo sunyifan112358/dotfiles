@@ -69,6 +69,7 @@ Plug 'klen/python-mode'
 Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
 Plug 'valloric/youcompleteme'
+Plug 'tomasr/molokai'
 call plug#end()
 
 " Airline setup
@@ -79,16 +80,17 @@ call plug#end()
 " let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'molokai'
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Solarized
-"colorscheme molokai
-set background=light
-colorscheme solarized
-let g:solarized_termcolors=256
+" Colorscheme
+colorscheme molokai
+let g:rehash256 = 1
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
 highlight ColorColumn ctermbg=160 guibg=#D80000
 
 " Syntastic
@@ -106,6 +108,9 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " Syntastic - cuda
 let g:syntastic_cuda_checkers = []
+
+" Syntastic - python
+let g:syntastic_python_checkers = []
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1
