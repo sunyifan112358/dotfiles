@@ -23,8 +23,13 @@ set laststatus=2
 
 set confirm
 
-set visualbell
+"set visualbell
 set t_vb=
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+set guifont=Roboto\ Mono\ Light\ for\ Powerline\ 12
 
 set t_Co=256
 
@@ -69,6 +74,7 @@ Plug 'klen/python-mode'
 Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
 Plug 'valloric/youcompleteme'
+Plug 'tomasr/molokai'
 call plug#end()
 
 " Airline setup
@@ -79,16 +85,17 @@ call plug#end()
 " let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'molokai'
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Solarized
-"colorscheme molokai
-set background=light
-colorscheme solarized
-let g:solarized_termcolors=256
+" Colorscheme
+colorscheme molokai
+let g:rehash256 = 1
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termcolors=256
 highlight ColorColumn ctermbg=160 guibg=#D80000
 
 " Syntastic
@@ -106,6 +113,9 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " Syntastic - cuda
 let g:syntastic_cuda_checkers = []
+
+" Syntastic - python
+let g:syntastic_python_checkers = []
 
 " Markdown
 let g:vim_markdown_folding_disabled = 1

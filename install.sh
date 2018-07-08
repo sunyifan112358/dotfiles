@@ -24,7 +24,7 @@ ln -s $PWD/profile $HOME/.profile
 
 git config --global core.editor "vim"
 
-vim +PlugInstall +qall
+vim +PlugInstall +GoInstallBinaries +qall
 
 # Install YouCompleteMe
 cd vim/plugged/youcompleteme
