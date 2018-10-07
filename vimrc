@@ -131,6 +131,10 @@ let g:pymode_folding = 0
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports"
+let g:godef_split = 0
+let g:go_list_type = 'quickfix'
+let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
+let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 
 " Vim Pencil
 "augroup pencil
