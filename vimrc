@@ -75,6 +75,7 @@ Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
 Plug 'valloric/youcompleteme'
 Plug 'tomasr/molokai'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Airline setup
@@ -128,13 +129,12 @@ let g:vim_markdown_folding_disabled = 1
 let g:pymode_folding = 0
 
 " Go
+au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports"
 let g:godef_split = 0
 let g:go_list_type = 'quickfix'
-let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
-let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 
 " Vim Pencil
 "augroup pencil
