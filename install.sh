@@ -10,12 +10,18 @@ mv $HOME/.vim $backup_folder_name 2> /dev/null
 mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
 mv $HOME/.profile $backup_folder_name 2> /dev/null
 
-sudo apt-get -y install \
-  git vim cmake tmux mosh build-essential \
-  python-dev \
-  nodejs npm
+if test "$(uname)" = "Darwin" ; then
+  # MacOS
+  sample = ""
+else
+  # Linux
+  sudo apt-get -y install \
+    git vim cmake tmux mosh build-essential \
+    python-dev \
+    nodejs npm
 
-cd bash-it && ./install.sh --silent && cd ..
+  cd bash-it && ./install.sh --silent && cd ..
+fi
 
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/vim $HOME/.vim
@@ -28,5 +34,5 @@ vim +PlugInstall +GoInstallBinaries +qall
 
 # Install YouCompleteMe
 cd vim/plugged/youcompleteme
-./install.py --clang-completer --go-complete
+./install.py --clang-completer --go-completer
 cd ../../..
