@@ -5,7 +5,6 @@ git submodule update --init --recursive
 backup_folder_name=$HOME/old_dotfiles/$(date +%s)_old_dotfiles
 mkdir -p $backup_folder_name
 
-
 mv $HOME/.vimrc $backup_folder_name 2> /dev/null
 mv $HOME/.vim $backup_folder_name 2> /dev/null
 mv $HOME/.tmux.conf $backup_folder_name 2> /dev/null
@@ -17,12 +16,16 @@ if test "$(uname)" = "Darwin" ; then
   brew install zsh zsh-completions nvim
 else
   # Linux
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository -y ppa:neovim-ppa/stable
+  sudo apt-get update
   sudo apt-get -y install \
-    git vim cmake tmux mosh build-essential \
+    build-essential \
+    cmake tmux mosh \
     python-dev \
     nodejs npm \
-    zsh zsh-completions \
-    nvim
+    zsh \
+    neovim
 
   #cd bash-it && ./install.sh --silent && cd ..
 fi
