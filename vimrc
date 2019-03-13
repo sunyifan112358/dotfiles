@@ -48,6 +48,8 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
+autocmd FileType go setlocal ts=4 sts=4 sw=4
+
 set colorcolumn=80
 set encoding=utf-8
 
@@ -70,13 +72,23 @@ Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'rhysd/vim-clang-format'
-Plug 'klen/python-mode'
+"Plug 'klen/python-mode'
 Plug 'petrushka/vim-opencl'
 Plug 'reedes/vim-pencil'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'tomasr/molokai'
 Plug 'rust-lang/rust.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 call plug#end()
+
+let g:deoplete#enable_at_startup = 1
 
 " Airline setup
 " let g:airline_powerline_fonts = 0
@@ -90,6 +102,7 @@ let g:airline_theme = 'molokai'
 
 " NerdTree
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Colorscheme
 colorscheme molokai
@@ -126,7 +139,7 @@ let g:vim_markdown_folding_disabled = 1
 :imap <F5> <C-R>=strftime('%T')<CR>
 
 " Python
-let g:pymode_folding = 0
+"let g:pymode_folding = 0
 
 " Go
 au FileType go nmap <leader>b <Plug>(go-build)
