@@ -30,7 +30,10 @@ else
   #cd bash-it && ./install.sh --silent && cd ..
 fi
 
+pip3 install --user pynvim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/vim $HOME/.vim
@@ -42,4 +45,4 @@ ln -s $PWD/vimrc $HOME/.config/nvim/init.vim
 git config --global core.editor "vim"
 
 vim +PlugInstall +GoInstallBinaries +qall
-nvim +PlugInstall +GoInstallBinaries +qall 
+nvim +PlugInstall +GoInstallBinaries +UpdateRemotePlugins +qall 
