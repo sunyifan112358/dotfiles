@@ -13,7 +13,7 @@ mv $HOME/.config/nvim/init.vim $backup_folder_name 2> /dev/null
 
 if test "$(uname)" = "Darwin" ; then
   # MacOS
-  brew install zsh zsh-completions nvim
+  brew install zsh zsh-completions fish nvim
 else
   # Linux
   sudo apt-get install software-properties-common
@@ -24,14 +24,11 @@ else
     cmake tmux mosh \
     python-dev \
     nodejs npm \
-    zsh \
+    zsh fish \
     neovim
-
-  #cd bash-it && ./install.sh --silent && cd ..
 fi
 
 pip3 install --user pynvim
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -42,7 +39,7 @@ ln -s $PWD/profile $HOME/.profile
 mkdir -p $HOME/.config/nvim
 ln -s $PWD/vimrc $HOME/.config/nvim/init.vim
 
-git config --global core.editor "vim"
+git config --global core.editor "nvim"
 
 vim +PlugInstall +GoInstallBinaries +qall
 nvim +PlugInstall +GoInstallBinaries +UpdateRemotePlugins +qall 
