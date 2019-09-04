@@ -13,7 +13,7 @@ mv $HOME/.config/nvim/init.vim $backup_folder_name 2> /dev/null
 
 if test "$(uname)" = "Darwin" ; then
   # MacOS
-  brew install zsh zsh-completions fish nvim
+  brew install zsh zsh-completions fish nvim python
 else
   # Linux
   sudo apt-get install software-properties-common
