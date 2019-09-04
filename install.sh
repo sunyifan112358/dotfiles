@@ -34,7 +34,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/vim $HOME/.vim
-ln -s $PWD/tmux.conf $HOME/.tmux.conf 
+ln -s $PWD/.tmux/.tmux.conf $HOME/.tmux.conf 
+ln -s $PWD/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
 ln -s $PWD/profile $HOME/.profile
 mkdir -p $HOME/.config/nvim
 ln -s $PWD/vimrc $HOME/.config/nvim/init.vim
