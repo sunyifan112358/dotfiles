@@ -1,1 +1,0 @@
-export PATH=$PATH:/opt/rocm/bin/:/opt/CodeXL_2.4-58
